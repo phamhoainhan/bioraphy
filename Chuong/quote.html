@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="nav.js"></script>
+    <link rel="stylesheet" href="book.css">
+
+    <style> 
+    /* text */
+        .test {
+            text-align: center;
+            width: 500px; 
+            word-wrap: break-word;
+            font-size: 18px;
+            font-style: italic;
+            font-family: Arial;
+        }
+        /* Button */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+        }
+        #wrapper {
+            background: #23292D;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1{
+            font-weight: 400;
+            font-size: 3rem;
+        }
+        a.button{
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #f5f5f5;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: all 0.25s ease;
+        }
+        a.button.messenger{
+            background: #0099FF;
+            color: #fff;
+        }
+        a.button.messenger:hover{
+            background: #097ac5;
+        }
+        a.button.youtube{
+            background: #CD201F;
+            color: #fff;
+        }
+        a.button.youtube:hover{
+            background: #961919;
+        }
+   
+        /* Vertical line */
+        .vl {
+        border-left: 6px solid green;
+        height: 100%;  
+        }
+
+        /* Header */
+        .divider {
+          color: white;
+          font-style: italic;
+          font-size: 50px;
+          display: flex;
+          align-items: center;
+          font-family: Arial;
+        }
+
+        .divider::before, .divider::after {
+          flex: 1;
+          content: '';
+          padding: 3px;
+          background-color: lightcoral;
+          margin: 5px;
+        } 
+        /* Background */
+        .header {
+          margin-right: 0px;
+          padding: 30px;
+          padding-bottom: 50px;
+          text-align: top;  
+          background: black;
+          color: white;
+          font-size: 50px;
+          border-radius: 50px;
+        }
+        /* horizontal */
+        .hr {
+        position: relative;
+        top: 10px;
+        border: none;
+        height: 5px;
+        background: black;
+        margin-bottom: 50px;
+        width: 50%;
+        }
+      img {
+        width : 60px; 
+        height: 80px; 
+        align-items :left; 
+        border-radius: 30px; 
+        margin-right: 20px;
+      }
+        
+    </style>
+
+</head>
+<body>
+    <div class="container-fluid ps-0" style="padding-right: 0px;">
+        <nav class="navbar navbar-expand-lg ">
+          <div class="container-fluid" style="position: fixed; border-bottom: 1px solid #888888;z-index: 1;background-color: #000000;">
+            <a class="navbar-brand" href="#" style="color: azure !important">Marie Curie</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+              aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-labe l="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0  menu ">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page"  style="color: azure !important" href="#">Home</a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Biography </a>
+                 
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Life cycle</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul> -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="biography.html#">Biography</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Achievenments</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Project.html">Books and More</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Download</a>
+                </li>
+              </ul>
+              <div class="input-wrapper">
+                <button class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="25px" width="25px">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff"
+                      d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z">
+                    </path>
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff" d="M22 22L20 20">
+                    </path>
+                  </svg>
+                </button>
+                <input placeholder="search.." class="input" name="text" type="text">
+              </div>
+            </div>
+          </div>
+        </nav>
+<section class="book">
+<!-- SECTION -->
+    <div class="grid text-center" style="--bs-columns: 8; --bs-gap: 1rem;">
+        <div class="row">
+            <div class="col-2">
+                <div id="mySidepanel" class="sidepanel">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Books & More &nbsp; &#10006;</a>
+                    <div class="menu-column">
+                        <a class="link" href="book.html">Books</a>
+                        <a class="link active" href="quote.html">Quotes</a>
+                        <a class="link" href="movie.html">Movies</a>
+                    </div>
+                </div>
+                <button class="openbtn" onclick="openNav()">&#9776; Books & More</button>
+
+                <script src="a.js"></script>
+            </div>
+
+
+           
+            <!-- Quote body --> 
+            <div class="col-lg-5" align="center" style="padding-left: 50px;">
+              <div class="vl">
+                <div class="header">
+                  <div class="divider">
+                    Quotes
+                  </div>
+                  <hr class="hr">
+                  
+                  <!-- <div class="col-md-5">
+                    <p class="test">
+                      <img src="https://i.huffpost.com/gen/1225472/thumbs/o-WOMEN-NOBEL-PRIZE-facebook.jpg" width="50px" align="left" style="border-radius: 40px; margin-right: 20px;">
+                      One never notices what has been done; one can only see what remains to be done.
+                    </p>
+                    <p class="test" style="font-size: small; font-style: italic;">- Marie Curie
+                  </div> -->
+
+                  <!-- Blockquote -->
+                  <blockquote class="test">
+                    <img src="https://i.huffpost.com/gen/1225472/thumbs/o-WOMEN-NOBEL-PRIZE-facebook.jpg" width="60px" height="60px" align="left" style="border-radius: 40px; margin-right: 20px;">
+                    <p>" Nothing in life is to be feared, it is only to be understood. Now is the time to understand more so that we may fear less."</p>
+                    <footer><p class="test" style="font-size: small; font-style: italic;">- Marie Curie <cite title="Source Title"><a href="https://www.smorescience.com/marie-curie-quotes/" target="_blank">smorescience</a></cite></footer>
+                  </blockquote>
+                  <hr width="50%">
+
+                  <blockquote class="test">
+                    <img src="https://www.oklahoman.com/gcdn/authoring/2017/02/17/NOKL/ghnewsok-OK-5538470-438dba62.jpeg?width=660&height=809&fit=crop&format=pjpg&auto=webp" width="60px" height="60px" align="left" style="border-radius: 40px; margin-right: 20px;">
+                    <p>"Life is not easy for any of us. But what of that? We must have perseverance and above all confidence in ourselves. We must believe that we are gifted for something and that this thing must be attained."</p>
+                    <footer><p class="test" style="font-size: small; font-style: italic;">- Marie Curie <cite title="Source Title"><a href="https://www.smorescience.com/marie-curie-quotes/" target="_blank">smorescience</a></cite></footer>
+                  </blockquote>
+                  <hr width="50%">
+
+                  <blockquote class="test">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYjoag6b-ep-U7U_2yyNL8BDs4HhsgVYXCKg&usqp=CAU" width="60px" height="60px" align="left" style="border-radius: 40px;">
+                    <p>"Scientist believe in things,not in person"</p>
+                    <footer><p class="test" style="font-size: small; font-style: italic;">- Marie Curie <cite title="Source Title"><a href="https://www.smorescience.com/marie-curie-quotes/" target="_blank">smorescience</a></cite></footer>
+                  </blockquote>
+                  <hr width="50%">
+                  
+                  <blockquote class="test">
+                    <img src="data:image/jpeg;base64,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" width="60px" height="60px" align="left" style="border-radius: 40px;">
+                    <p>"There are sadistic scientists who hurry to hunt down errors instead of establishing the truth.  "</p>
+                    <footer><p class="test" style="font-size: small; font-style: italic;">- Marie Curie <cite title="Source Title"><a href="https://www.smorescience.com/marie-curie-quotes/" target="_blank">smorescience</a></cite></footer>
+                  </blockquote>
+                  <hr width="50%">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5" align="center">
+              <div class="header">
+                <div class="divider">
+                  Quotes
+                </div>
+                <hr class="hr">
+
+                <blockquote class="test">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQctF9gohZ5zmS4yCrLEwJEVX1pH6qpm5CE7Q&usqp=CAU" width="60px" height="60px" align="left" style="border-radius: 30px;">
+                  <p>"If I see anything vital around me, it is precisely that spirit of adventure, which seems indestructible and is akin to curiosity."</p>
+                  <footer><p class="test" style="font-size: small; font-style: italic;">- Marie Curie <cite title="Source Title"><a href="https://www.smorescience.com/marie-curie-quotes/" target="_blank">brainyquote</a></cite></footer>
+                </blockquote>
+                <hr width="50%">
+
+                <blockquote class="test">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlO7fD8Pgjcb11YXWBZ45yMXaEpfNpLJ6Ivg&usqp=CAU" width="60px" height="60px" align="left" style="border-radius: 30px;">
+                  <p>"I have frequently been questioned, especially by women, of how I could reconcile family life with a scientific career. Well, it has not been easy.</p>
+                  <footer><p class="test" style="font-size: small; font-style: italic;">- Marie Curie <cite title="Source Title"><a href="https://www.smorescience.com/marie-curie-quotes/" target="_blank">brainyquote</a></cite></footer>
+                </blockquote>
+
+                <hr width="50%">
+                <blockquote class="test">
+                  <img src="https://mariecuriehanoischool.com/media/k2/items/cache/e0a70f72bdae9885bfc32d7cd19a26a1_M.jpg" width="60px" height="60px" align="left" style="border-radius: 30px;">
+                  <p>"I am one of those who think like Nobel, that humanity will draw more good than evil from new discoveries."</p>
+                  <footer><p class="test" style="font-size: small; font-style: italic;">- Marie Curie <cite title="Source Title"><a href="https://www.smorescience.com/marie-curie-quotes/" target="_blank">brainyquote</a></cite></footer>
+                </blockquote>
+
+                <hr width="50%">
+                <blockquote class="test">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuone0ffMsoWDgm8FshEKz0OSNashZubzRRw&usqp=CAU" width="60px" height="60px" align="left" style="border-radius: 20px;">
+                  <p>"If I see anything vital around me, it is precisely that spirit of adventure, which seems indestructible and is akin to curiosity."</p>
+                  <footer><p class="test" style="font-size: small; font-style: italic;">- Marie Curie <cite title="Source Title"><a href="https://www.smorescience.com/marie-curie-quotes/" target="_blank">brainyquote</a></cite></footer>
+                </blockquote>
+                <hr width="50%">
+                
+                
+              </div>
+
+            
+      </div></div>
+          
+        </div>
+    </div>
+</section> 
+</body>
+</html>

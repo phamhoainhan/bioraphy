@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="nav.js"></script>
+    <link rel="stylesheet" href="book.css">
+
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();   
+      });
+      </script>
+</head>
+<body>
+    <div class="container-fluid ps-0" style="padding-right: 0px;">
+        <nav class="navbar navbar-expand-lg ">
+          <div class="container-fluid" style="position: fixed; border-bottom: 1px solid #888888;z-index: 1;background-color: #000000;">
+            <a class="navbar-brand" href="#" style="color: azure !important">Marie Curie</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+              aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-labe l="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0  menu ">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page"  style="color: azure !important" href="#">Home</a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Biography </a>
+                 
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Life cycle</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul> -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="biography.html#">Biography</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Achievenments</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="book.html">Books and More</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Download</a>
+                </li>
+              </ul>
+              <div class="input-wrapper">
+                <button class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="25px" width="25px">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff"
+                      d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z">
+                    </path>
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff" d="M22 22L20 20">
+                    </path>
+                  </svg>
+                </button>
+                <input placeholder="search.." class="input" name="text" type="text">
+              </div>
+            </div>
+          </div>
+        </nav>
+<section class="book">
+<!-- SECTION -->
+    <div class="grid text-center" style="--bs-columns: 8; --bs-gap: 1rem;">
+        <div class="row">
+            <div class="col-2">
+                <div id="mySidepanel" class="sidepanel">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Books & More &nbsp; &#10006;</a>
+                    <div class="menu-column">
+                        <a class="link active" href="book.html">Books</a>
+                        <a class="link" href="quote.html">Quotes</a>
+                        <a class="link" href="movie.html">Movies</a>
+                    </div>
+                </div>
+                <button class="openbtn" onclick="openNav()">&#9776; Books & More</button>
+
+                <script src="a.js"></script>
+            </div>
+            <div class="col-lg-8" style="padding-left: 50px;">
+              <div class="vl">
+            <div>
+                <div class="grid text-center" style="--bs-columns: 8; --bs-gap: 1rem; display: flex;">      
+                    <div class="g-col-2 abc">
+                      <div class="card">
+                        <div class="card-img"> 
+                            <img src="https://m.media-amazon.com/images/I/51UAyKK-YfL._SX331_BO1,204,203,200_.jpg" style="width: 55%;" >
+                        </div>
+                        <div class="card-info" >
+                          <p class="text-title">The Discovery of Radium. Research on Radioactive Substances.
+                          <p class="text-body">by Marie Skłodowska Curie (Author), Alessandro Patruno (Translator)
+                            <div>
+                            <a rel="nofollow" class="btn-see btn btn-primary adspruce-download-link" href="https://www.amazon.com/Discovery-Radium-Research-Radioactive-Substances/dp/B086Y7CGYQ" target="_blank">
+                              Read More
+                            </a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="g-col-2 abc"><div class="card">
+                      <div class="card-img">
+                        <img src="https://m.media-amazon.com/images/I/41gLu0u0uSL._SX311_BO1,204,203,200_.jpg" style="width: 53%;" >
+                      </div>
+                        <div class="card-info">
+                          <p class="text-title">Madame Curie: A Biography</p>
+                          <p class="text-body">by Eve Curie (Author), Vincent Sheean (Translator)</p>                            
+                          <div>
+                            <a rel="nofollow" class="btn-see btn btn-primary adspruce-download-link" href="https://www.amazon.com/Madame-Curie-Biography-Eve/dp/0306810387/ref=sr_1_2?keywords=Marie+Curie&qid=1688111359&s=books&sr=1-2" target="_blank">
+                              Read More
+                            </a> 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="g-col-2 abc"><div class="card">
+                      <div class="card-img">
+                        <img src="https://m.media-amazon.com/images/I/419R3wtjkBL._SX384_BO1,204,203,200_.jpg" style="width: 65%;" >
+                      </div>
+                      <div class="card-info">
+                        <p class="text-title">Marie Curie: The Life and Legacy of the Legendary Scientist Who Became the First Woman to Win a Nobel Prize</p>
+                        <p class="text-body">by Charles River Editors (Author)</p>
+                        <div>
+                          <a rel="nofollow" class="btn-see btn btn-primary adspruce-download-link" href="https://www.amazon.com/Marie-Curie-Legacy-Legendary-Scientist-ebook/dp/B07BKBJR5M/ref=sr_1_22?keywords=Marie+Curie&qid=1688111359&s=books&sr=1-22" target="_blank">
+                            Read More
+                          </a>
+                        </div> 
+                      </div>
+                      </div></div>
+                    <div class="g-col-2 abc"><div class="card">
+                      <div class="card-img">
+                        <img src="https://m.media-amazon.com/images/I/51J7LZ942qL._SX331_BO1,204,203,200_.jpg" style="width: 56%;" >
+                      </div>
+                      <div class="card-info">
+                        <p class="text-title">Marie Curie: A Life (Radcliffe Biography Series)</p>
+                        <p class="text-body">by Susan Quinn (Author)</p>
+                        <div>
+                          <a rel="nofollow" class="btn-see btn btn-primary adspruce-download-link" href="https://www.amazon.com/Marie-Curie-Life-Susan-Quinn-ebook/dp/B005HRYMZ0/ref=d_reads_cwrtbar_sccl_1_3/130-5710356-9135867?pd_rd_w=uRnPR&content-id=amzn1.sym.eb5dde69-fb4b-4958-92c6-5fa677741093&pf_rd_p=eb5dde69-fb4b-4958-92c6-5fa677741093&pf_rd_r=0535WF4PBA3MYDX4KYYA&pd_rd_wg=vP5Ce&pd_rd_r=728f504b-c4ca-427e-89fa-ccc165872547&pd_rd_i=B005HRYMZ0&psc=1" target="_blank">
+                            Read More
+                          </a> 
+                        </div>
+                      </div>
+                      </div></div>
+                </div> 
+
+                <div>
+                    <div class="grid text-center" style="--bs-columns: 8; --bs-gap: 1rem; display: flex;">      
+                      <div class="g-col-2 abc">
+                        <div class="card">
+                        <div class="card-img"> 
+                            <img src="https://m.media-amazon.com/images/I/41qeNy9wOjL._SX361_BO1,204,203,200_.jpg" style="width: 61%;" >
+                        </div>
+                        <div class="card-info" >
+                          <p class="text-title">Radioactive: Marie & Pierre Curie: A Tale of Love and Fallout
+                          <p class="text-body">by Lauren Redniss (Author)
+                            <div>
+                              <a rel="nofollow" class="btn-see btn btn-primary adspruce-download-link" href="https://www.amazon.com/Radioactive-Marie-Pierre-Curie-Fallout/dp/0062416162/ref=sr_1_4?keywords=Marie+Curie&qid=1688111359&s=books&sr=1-4" target="_blank">
+                                Read More
+                              </a> 
+                            </div>
+                        </div>
+                        </div></div>
+                      <div class="g-col-2 abc"><div class="card">
+                        <div class="card-img">
+                          <img src="https://m.media-amazon.com/images/I/51G0w+u0IAL._SX482_BO1,204,203,200_.jpg" style="width: 53%;" >
+                        </div>
+                        <div class="card-info">
+                          <p class="text-title">Pierre Curie: With Autobiographical Notes by Marie Curie</p>
+                          <p class="text-body">by Marie Curie (Author)</p>
+                          <div>
+                            <a rel="nofollow" class="btn-see btn btn-primary adspruce-download-link" href="https://www.amazon.com/Pierre-Curie-Autobiographical-Notes-Marie/dp/0486201996/ref=sr_1_23?keywords=Marie+Curie&qid=1688111359&s=books&sr=1-23" target="_blank">
+                              Read More
+                            </a> 
+                          </div>
+                        </div>
+                        </div></div>
+                      <div class="g-col-2 abc"><div class="card">
+                        <div class="card-img">
+                          <img src="https://m.media-amazon.com/images/I/4103YZcJMNL._SX322_BO1,204,203,200_.jpg" style="width: 55%;" >
+                        </div>
+                        <div class="card-info">
+                          <p class="text-title">Marie Curie and Her Daughters: The Private Lives of Science's First Family</p>
+                          <p class="text-body">by Shelley Emling (Author)</p>
+                          <a rel="nofollow" class="btn-see btn btn-primary adspruce-download-link" href="https://www.amazon.com/Marie-Curie-Her-Daughters-Sciences/dp/1137278366" target="_blank">
+                            Read More
+                          </a> 
+                        </div>
+                        </div></div>
+                      <div class="g-col-2 abc">
+                        <div class="card">
+                          <div class="card-img">
+                            <img src="https://m.media-amazon.com/images/I/41u1Z96EqpL._SX334_BO1,204,203,200_.jpg" style="width: 57%;" >
+                          </div>
+                          <div class="card-info">
+                            <p class="text-title">Obsessive Genius: The Inner World of Marie Curie (Great Discoveries)</p>
+                            <p class="text-body">by Barbara Goldsmith (Author)</p>
+                            <a rel="nofollow" class="btn-see btn btn-primary adspruce-download-link" href="https://www.amazon.com/Obsessive-Genius-Inner-World-Discoveries/dp/0393327485" target="_blank">
+                              Read More
+                            </a>                         
+                          </div>
+                        </div>
+                      </div>
+                    </div> 
+                  </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section> 
+</body>
+</html>

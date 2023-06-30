@@ -1,0 +1,65 @@
+.sidepanel {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 250px;
+    margin-top: 2px;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.7s;
+    padding-top: 65px;
+  
+  }
+  
+  .menu-column {
+    margin-top: 70px;
+  }
+  
+  
+  .sidepanel a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    margin-top: 20px;
+  
+  }
+  .link.active {
+    color: white;
+  }
+  
+  
+  .sidepanel a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 24px;
+  }
+  
+  .sidepanel .closebtn:hover {
+    color: #f1f1f1;
+  }
+  
+  .openbtn {
+  
+    margin-right: 50px;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    width: 300px;
+    margin-left: 0;
+    position: absolute;
+    margin-top: 10px;
+    left: 10px;
+    z-index: 0;
+  }

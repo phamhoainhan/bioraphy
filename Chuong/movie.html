@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="nav.js"></script>
+    <link rel="stylesheet" href="book.css">
+
+    <script>
+      
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+
+    </script>
+
+    <style> 
+    /* text */
+        p.test {
+            text-align: center;
+            width: 500px; 
+            word-wrap: break-word;
+            font-size: 15px;
+        }
+        /* Button */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+        }
+        #wrapper {
+            background: #23292D;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1{
+            font-weight: 400;
+            font-size: 3rem;
+        }
+        a.button{
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #f5f5f5;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: all 0.25s ease;
+        }
+        /* Vertical line */
+        .vl {
+        border-left: 6px solid green;
+        height: 1700px;  
+        }
+        /* horizontal */
+        .hr {
+        position: relative;
+        top: 10px;
+        border: none;
+        height: 5px;
+        background: black;
+        margin-bottom: 50px;
+        width: 50%;
+        }
+        /* MOVIE CSS */
+        /*  
+background-color: #A9C9FF;
+background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #444;
+    background:linear-gradient(to right bottom, #A9C9FF 0%, #FFBBEC 100%); 
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+figure {
+  margin-top: 20px;
+}
+
+.movie {
+    max-width: 800px;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 0 5px 20px 10px rgba(0, 0, 0, .2);
+    overflow: hidden;
+    margin-left: 50px;
+}
+
+.movie__hero {
+  flex: 0 0 45%;
+}
+
+.movie__img {
+    width: 300px;
+    height: 350px;
+    display: block;
+}
+
+.movie__content {
+    background-color: #fff;
+    flex: 1;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie__price {
+    background:linear-gradient(to bottom, #A9C9FF 0%, #FFBBEC 100%);
+    flex: 0 0 50px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+    writing-mode: vertical-lr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie__title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.heading__primary {
+    font-size: 16px;
+    margin-right: auto;
+    color: royalblue;
+}
+
+.fa-fire {
+    color: salmon;
+}
+
+.movie__tag {
+    font-size: 10px;
+    color: #fff;
+  padding: 2px 7px;
+  border-radius: 100px;
+  margin-right: 8px;
+  display: block;
+  text-transform: uppercase;
+
+}
+
+.movie__tag--1 {
+  background-color: #A9C9FF;
+}
+
+.movie__tag--2 {
+    background-color:#FFBBEC;
+}
+
+.movie__description {
+    font-size: 14px;
+    color: black;
+}
+
+.movie__details {
+    display: flex;
+    margin: auto;
+    
+}
+
+.movie__detail {
+   font-size: 13px;
+   margin-right: 20px;
+   display: flex;
+   align-items: center;
+   color: black;
+}
+
+.icons i {
+    margin-right: 3px;
+    font-size: 18px;
+}
+
+.icons-red {
+    color: salmon;
+}
+.icons-grey {
+    color: grey;
+}
+
+.icons-yellow {
+    color: rgb(190, 190, 71);
+
+}
+
+.img {
+  width: 100%;
+  height:400px;
+}
+
+/* IMG SLIDESHOW */
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 300px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+    </style>
+
+</head>
+<body>
+    <div class="container-fluid ps-0" style="padding-right: 0px;">
+        <nav class="navbar navbar-expand-lg ">
+          <div class="container-fluid" style="position: fixed; border-bottom: 1px solid #888888;z-index: 1;background-color: #000000;">
+            <a class="navbar-brand" href="#" style="color: azure !important">Marie Curie</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+              aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-labe l="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0  menu ">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page"  style="color: azure !important" href="#">Home</a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Biography </a>
+                 
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Life cycle</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul> -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="biography.html#">Biography</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Achievenments</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="book.html">Books and More</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Download</a>
+                </li>
+              </ul>
+              <div class="input-wrapper">
+                <button class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="25px" width="25px">
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff"
+                      d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z">
+                    </path>
+                    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff" d="M22 22L20 20">
+                    </path>
+                  </svg>
+                </button>
+                <input placeholder="search.." class="input" name="text" type="text">
+              </div>
+            </div>
+          </div>
+        </nav>
+    <section class="book">
+<!-- SECTION -->
+      <div class="grid text-center" style="--bs-columns: 8; --bs-gap: 1rem;">
+          <div class="row">
+              <div class="col-2">
+                  <div id="mySidepanel" class="sidepanel">
+                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Books & More &nbsp; &#10006;</a>
+                      <div class="menu-column">
+                          <a class="link" href="book.html">Books</a>
+                          <a class="link" href="quote.html">Quotes</a>
+                          <a class="link active" href="movie.html">Movies</a>
+                      </div>
+                  </div>
+                    <button class="openbtn" onclick="openNav()">&#9776; Books & More</button>
+
+                    <script src="a.js"></script>
+                </div>
+
+                <!-- Movies body --> 
+            <div class="col-lg-10" align="left">
+              <div class="vl">
+                <figure class="movie">
+                  <div class="movie__hero">
+                    <img class="img" src="https://tr.web.img4.acsta.net/pictures/20/09/15/15/55/5913441.jpg"  >
+                  </div>
+                  <div class="movie__content">
+                    <div class="movie__title">
+                      <h1 class="heading__primary">Radioactive <i class="fas fa-fire"></i></h1>
+                      <div class="movie__tag movie__tag--1">#Drama</div>
+                      <div class="movie__tag movie__tag--2">#Biography</div>
+                      <div class="movie__tag movie__tag--2">#Romance</div>
+                    </div>
+                    <p class="movie__description">
+                      The incredible true story of Marie Sklodowska-Curie and her Nobel Prize-winning work that changed the world.
+                    </p>
+                    <div class="movie__details">
+                      <p class="movie__detail"><span class="icons icons-red"><i class="fas fa-camera-retro"></i> </span> Rosamund Pike</p>
+                      <p class="movie__detail"><span class="icons icons-grey"><i class="fas fa-clock"></i> </span>1h 49m</p>
+                      <p class="movie__detail"><span class="icons icons-grey"><i class="fas fa-clock"></i> </span>2019</p>
+                      <p class="movie__detail"><span class="icons icons-yellow"><i class="fas fa-file-invoice-dollar"></i></p>
+                    </div>
+                  </div>
+                  <div class="movie__price"><a href="https://www.imdb.com/video/vi136230937/?playlistId=tt5705058&ref_=tt_ov_vi" target="_blank">Watch Trailer</a></div>
+                </figure>
+                <figure class="movie">
+                  <div class="movie__hero">
+                    <img class="img" src="https://m.media-amazon.com/images/M/MV5BNzhjOTU0ODUtNTNhYy00NzVhLTlmYWQtNjI4YmQ3NjM5YjBkXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg"  >
+                  </div>
+                  <div class="movie__content">
+                    <div class="movie__title">
+                      <h1 class="heading__primary">Marie Curie: The Courage of Knowledge <i class="fas fa-fire"></i></h1>
+                      <div class="movie__tag movie__tag--1">#Drama</div>
+                      <div class="movie__tag movie__tag--2">#Biography</div>
+                      <div class="movie__tag movie__tag--2">#Romance</div>
+                    </div>
+                    <p class="movie__description">
+                      Follows the famous physicist and chemist Marie Curie and her struggle for recognition in the male-dominated science community in early 20th century France.
+                    </p>
+                    <div class="movie__details">
+                      <p class="movie__detail"><span class="icons icons-red"><i class="fas fa-camera-retro"></i> </span> Karolina Gruszka</p>
+                      <p class="movie__detail"><span class="icons icons-grey"><i class="fas fa-clock"></i> </span>1h 40m</p>
+                      <p class="movie__detail"><span class="icons icons-grey"><i class="fas fa-clock"></i> </span>2016</p>
+                      <p class="movie__detail"><span class="icons icons-yellow"><i class="fas fa-file-invoice-dollar"></i></p>
+                    </div>
+                  </div>
+                  <div class="movie__price"><a href="https://www.imdb.com/video/vi136230937/?playlistId=tt5705058&ref_=tt_ov_vi" target="_blank">Watch Trailer</a></div>
+                </figure>
+                <figure class="movie">
+                  <div class="movie__hero">
+                    <img class="img" src="https://m.media-amazon.com/images/M/MV5BOTRjOGM2NzktMDgxNS00YjU4LTkwNDktM2NkOTg1Yjk4OTgyXkEyXkFqcGdeQXVyNTk2OTgxOTA@._V1_.jpg"  >
+                  </div>
+                  <div class="movie__content">
+                    <div class="movie__title">
+                      <h1 class="heading__primary">Marie Curie <i class="fas fa-fire"></i></h1>
+                      <div class="movie__tag movie__tag--1">#Drama</div>
+                      <div class="movie__tag movie__tag--2">#Biography</div>
+                      <div class="movie__tag movie__tag--2">#TV Mini series</div>
+                    </div>
+                    <p class="movie__description">
+                      It is the life story of the great Polish- French scientist Marie Curie.
+                    </p>
+                    <div class="movie__details">
+                      <p class="movie__detail"><span class="icons icons-red"><i class="fas fa-camera-retro"></i> </span> Jane Lapotaire</p>
+                      <p class="movie__detail"><span class="icons icons-grey"><i class="fas fa-clock"></i> </span>5 episodes</p>
+                      <p class="movie__detail"><span class="icons icons-grey"><i class="fas fa-clock"></i> </span>1977</p>
+                      <p class="movie__detail"><span class="icons icons-yellow"><i class="fas fa-file-invoice-dollar"></i></p>
+                    </div>
+                  </div>
+                  <div class="movie__price"><a href="https://www.imdb.com/title/tt0075534/?ref_=tt_sims_tt_i_2" target="_blank">Read More</a></div>
+                </figure>
+                <figure class="movie">
+                  <div class="movie__hero">
+                    <img class="img" src="https://m.media-amazon.com/images/M/MV5BNDQ5MmQ4NzgtOTc3Ni00ZDFlLWE1NWMtNGNkYTJkZWM4MTMzXkEyXkFqcGdeQXVyNTIyOTk2Ng@@._V1_FMjpg_UX1000_.jpg"  >
+                  </div>
+                  <div class="movie__content">
+                    <div class="movie__title">
+                      <h1 class="heading__primary">Marie Curie <i class="fas fa-fire"></i></h1>
+                      <div class="movie__tag movie__tag--1">#Drama</div>
+                      <div class="movie__tag movie__tag--2">#Biography</div>
+                      <div class="movie__tag movie__tag--2">#TV Mini series</div>
+                    </div>
+                    <p class="movie__description">
+                      Marie Curie, an honorable woman is aFrench television film , in three parts directed by Michel Boisrond and broadcast from March 12 , 1991 on FR3 .
+                    </p>
+                    <div class="movie__details">
+                      <p class="movie__detail"><span class="icons icons-red"><i class="fas fa-camera-retro"></i> </span>Marie-Christine Barrault</p>
+                      <p class="movie__detail"><span class="icons icons-grey"><i class="fas fa-clock"></i> </span>1h 30m</p>
+                      <p class="movie__detail"><span class="icons icons-grey"><i class="fas fa-clock"></i> </span>1991</p>
+                      <p class="movie__detail"><span class="icons icons-yellow"><i class="fas fa-file-invoice-dollar"></i></p>
+                    </div>
+                  </div>
+                  <div class="movie__price"><a href="https://www.imdb.com/title/tt0098852/" target="_blank">Read More</a></div>
+                </figure>
+              </div>    
+            </div>
+          </div>    
+      </div>
+</section> 
+</body>
+</html>
